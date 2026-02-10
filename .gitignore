@@ -1,0 +1,4 @@
+*.exe
+bin/
+
+**/server.js
