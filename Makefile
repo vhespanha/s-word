@@ -1,5 +1,6 @@
 bin := s-word
 download-server := ./scripts/download-server.sh
+spy := ./scripts/spy.js
 
 SERVER_VERSION := v4.20.16
 SERVER_BUILD := desktop
@@ -19,3 +20,6 @@ $(bin): clean
 
 run:
 	@go run main.go
+
+spy: download-server
+	@node -r $(spy) server.js
